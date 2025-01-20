@@ -1,2 +1,0 @@
-/Users/chrisanderson/Projects/c-asm-os/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/chrisanderson/Projects/c-asm-os/cmake-build-debug/CMakeFiles/rebuild_cache.dir

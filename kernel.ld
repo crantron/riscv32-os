@@ -28,7 +28,7 @@ SECTIONS {
 
     /* page size */
     . = ALIGN(4096);
-     __free_ram = .;
+     __free_ram = .; /* define memory area after stack space. */
      . += 64 * 1024 * 1024; /* 64MB */
-     __free_ram_end = .;
+     __free_ram_end = .; /* define memory area after stack space. */
 }

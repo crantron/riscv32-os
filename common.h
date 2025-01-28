@@ -19,6 +19,10 @@ typedef uint32_t vaddr_t;
 #define va_end   __builtin_va_end
 #define va_arg   __builtin_va_arg
 #define PAGE_SIZE 4096
+#define PROCS_MAX 8       // Maximum number of processes
+
+#define PROC_UNUSED   0   // Unused process control structure
+#define PROC_RUNNABLE 1   // Runnable process
 
 void *memset(void *buf, char c, size_t n);
 void *memcpy(void *dst, const void *src, size_t n);
@@ -26,3 +30,9 @@ char *strcpy(char *dst, const char *src);
 int strcmp(const char *s1, const char *s2);
 void writestr(const char *str);
 void printf(const char *fmt, ...);
+struct process {
+    int pid;             // Process ID
+    int state;           // Process state: PROC_UNUSED or PROC_RUNNABLE
+    vaddr_t sp;          // Stack pointer
+    uint8_t stack[8192]; // Kernel stack
+};

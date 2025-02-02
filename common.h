@@ -30,9 +30,3 @@ char *strcpy(char *dst, const char *src);
 int strcmp(const char *s1, const char *s2);
 void writestr(const char *str);
 void printf(const char *fmt, ...);
-struct process {
-    int pid;             // Process ID
-    int state;           // Process state: PROC_UNUSED or PROC_RUNNABLE
-    vaddr_t sp;          // Stack pointer
-    uint8_t stack[8192]; // Kernel stack
-};
